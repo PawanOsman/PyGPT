@@ -141,13 +141,3 @@ class PyGPT:
         except Exception as e:
             raise ValueError(f"Failed to fetch new session tokens due to: {e}")
         print("Got tokens.")
-
-async def main():
-    config = {
-        "SessionToken": "<SESSION_TOKEN>",
-    }
-    gpt = PyGPT(config=config)
-    await gpt.init()
-
-
-asyncio.run(main())
