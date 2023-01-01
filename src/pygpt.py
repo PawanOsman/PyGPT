@@ -2,6 +2,8 @@ import uuid
 import asyncio
 import socketio
 import datetime
+import json
+import base64
 
 class PyGPT:
     def __init__(self, session_token, bypass_node='https://gpt.pawan.krd'):
@@ -15,7 +17,6 @@ class PyGPT:
         self.expires = datetime.datetime.now()
         self.pause_token_checks = False
         self.bypass_node = bypass_node
-        asyncio.create_task(self.check_tokens())
         asyncio.create_task(self.cleanup_conversations())
 
     async def connect(self):
@@ -26,7 +27,7 @@ class PyGPT:
 
     def on_connect(self):
         print('Connected to server')
-        self.ready = True
+        asyncio.create_task(self.check_tokens())
 
     def on_disconnect(self):
         print('Disconnected from server')
@@ -94,7 +95,7 @@ class PyGPT:
     def validate_token(self, token):
         if not token:
             return False
-        parsed = json.loads(base64.b64decode(token.split('.')[1]).decode())
+        parsed = json.loads(base64.b64decode(f'{token.split(".")[1]}==').decode())
         return datetime.datetime.now() <= datetime.datetime.fromtimestamp(parsed['exp'])
 
     async def get_tokens(self):
@@ -107,3 +108,4 @@ class PyGPT:
             self.auth = data['auth']
             self.expires = datetime.datetime.strptime(data['expires'], '%Y-%m-%dT%H:%M:%S.%fZ')
             self.session_token = data['sessionToken']
+            self.ready = True
