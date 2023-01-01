@@ -10,6 +10,12 @@
 [![GitHub license](https://img.shields.io/github/license/pawanosman/ChatGPT.py)](https://github.com/pawanosman/ChatGPT.py)
 [![Discord server](https://img.shields.io/discord/1055397662976905229?color=5865F2&logo=discord&logoColor=white)](https://discord.pawan.krd)
 
+## Get Started
+# Install dependencies first
+```bash
+pip install "python-socketio[asyncio_client]"
+```
+
 ## Example
 
 ```python
