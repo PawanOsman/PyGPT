@@ -4,7 +4,7 @@ import socketio
 import datetime
 
 class PyGPT:
-    def __init__(self, session_token, bypass_node='https://socket.pawan.krd'):
+    def __init__(self, session_token, bypass_node='https://gpt.pawan.krd'):
         self.ready = False
         self.socket = socketio.AsyncClient()
         self.socket.on('connect', self.on_connect)
