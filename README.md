@@ -33,3 +33,24 @@ async def main():
 if __name__ == '__main__':
     asyncio.run(main())
 ```
+
+
+for multiple queries
+
+```python 
+import asyncio
+from pygpt import PyGPT
+
+async def main():
+    chat_gpt = PyGPT('eyJhbGciOiJkaXIiLCJlbmMiOiJBMR0NN....')
+    await chat_gpt.connect()
+    await chat_gpt.wait_for_ready()
+    questions = ["how are you", "where do you live", "what do you do"]
+    for question in questions:
+        answer = await chat_gpt.ask(question)
+        print(answer)
+    await chat_gpt.disconnect()
+
+if name == 'main':
+    asyncio.run(main())
+ ```
