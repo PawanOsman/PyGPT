@@ -6,13 +6,15 @@ import json
 import base64
 
 class PyGPT:
-    def __init__(self, session_token, bypass_node='https://gpt.pawan.krd'):
+    def __init__(self, session_token, timeout=120, bypass_node='https://gpt.pawan.krd'):
         self.ready = False
         self.socket = socketio.AsyncClient()
         self.socket.on('connect', self.on_connect)
         self.socket.on('disconnect', self.on_disconnect)
+        self.socket.on('serverMessage', print)
         self.session_token = session_token
         self.conversations = []
+        self.timeout = timeout
         self.auth = None
         self.expires = datetime.datetime.now()
         self.pause_token_checks = False
@@ -20,7 +22,7 @@ class PyGPT:
         asyncio.create_task(self.cleanup_conversations())
 
     async def connect(self):
-        await self.socket.connect(self.bypass_node)
+        await self.socket.connect(f'{self.bypass_node}/?client=python&version=1.0.2&versionCode=102')
 
     async def disconnect(self):
         await self.socket.disconnect()
@@ -79,12 +81,13 @@ class PyGPT:
         if not self.auth or not self.validate_token(self.auth):
             await self.get_tokens()
         conversation = self.get_conversation_by_id(id)
-        data = await self.socket.call('askQuestion', {
+        # Fix for timeout issue by Ulysses0817: https://github.com/Ulysses0817
+        data = await self.socket.call(event='askQuestion', data={
             'prompt': prompt,
             'parentId': str(conversation['parent_id']),
             'conversationId': str(conversation['conversation_id']),
             'auth': self.auth
-        })
+        }, timeout=self.timeout)
 
         if 'error' in data:
             print(f'Error: {data["error"]}')
@@ -100,7 +103,8 @@ class PyGPT:
 
     async def get_tokens(self):
         await asyncio.sleep(1)
-        data = await self.socket.call('getSession', self.session_token)
+        # Fix for timeout issue by Ulysses0817: https://github.com/Ulysses0817
+        data = await self.socket.call(event='getSession', data=self.session_token, timeout=self.timeout)
 
         if 'error' in data:
             print(f'Error getting session: {data["error"]}')
