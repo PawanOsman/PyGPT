@@ -4,10 +4,11 @@
 ## For support join [[Discord](https://discord.pawan.krd)]
 # ChatGPT.py - Unofficial API client for ChatGPT [[Discord](https://discord.pawan.krd)]
 
-[![GitHub issues](https://img.shields.io/github/issues/pawanosman/ChatGPT.py)](https://github.com/PawanOsman/ChatGPT.py/issues)
-[![GitHub forks](https://img.shields.io/github/forks/pawanosman/ChatGPT.py)](https://github.com/pawanosman/ChatGPT.py/network)
-[![GitHub stars](https://img.shields.io/github/stars/pawanosman/ChatGPT.py)](https://github.com/pawanosman/ChatGPT.py/stargazers)
-[![GitHub license](https://img.shields.io/github/license/pawanosman/ChatGPT.py)](https://github.com/pawanosman/ChatGPT.py)
+[![PyPI Version](https://img.shields.io/pypi/v/PyGPT.svg)](https://pypi.org/project/PyGPT)
+[![GitHub issues](https://img.shields.io/github/issues/pawanosman/PyGPT)](https://github.com/PawanOsman/PyGPT/issues)
+[![GitHub forks](https://img.shields.io/github/forks/pawanosman/PyGPT)](https://github.com/pawanosman/PyGPT/network)
+[![GitHub stars](https://img.shields.io/github/stars/pawanosman/PyGPT)](https://github.com/pawanosman/PyGPT/stargazers)
+[![GitHub license](https://img.shields.io/github/license/pawanosman/PyGPT)](https://github.com/pawanosman/PyGPT)
 [![Discord server](https://img.shields.io/discord/1055397662976905229?color=5865F2&logo=discord&logoColor=white)](https://discord.pawan.krd)
 
 ## Get Started
