@@ -5,6 +5,7 @@ import datetime
 import json
 import base64
 
+
 class PyGPT:
     def __init__(self, session_token, timeout=120, bypass_node='https://gpt.pawan.krd'):
         self.ready = False
@@ -52,7 +53,8 @@ class PyGPT:
         while True:
             await asyncio.sleep(60)
             now = datetime.datetime.now()
-            self.conversations = [c for c in self.conversations if now - c['last_active'] < datetime.timedelta(minutes=2)]
+            self.conversations = [c for c in self.conversations if
+                                  now - c['last_active'] < datetime.timedelta(minutes=2)]
 
     def add_conversation(self, id):
         conversation = {

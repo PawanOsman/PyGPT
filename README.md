@@ -13,14 +13,14 @@
 ## Get Started
 # Install dependencies first
 ```bash
-pip install "python-socketio[asyncio_client]"
+pip install --upgrade PyGPT
 ```
 
 ## Example
 
 ```python
 import asyncio
-from pygpt import PyGPT
+from PyGPT import PyGPT
 
 async def main():
     chat_gpt = PyGPT('eyJhbGciOiJkaXIiLCJlbmMiOiJBMR0NN....')
@@ -35,11 +35,11 @@ if __name__ == '__main__':
 ```
 
 
-for multiple queries
+### For multiple queries
 
 ```python 
 import asyncio
-from pygpt import PyGPT
+from PyGPT import PyGPT
 
 async def main():
     chat_gpt = PyGPT('eyJhbGciOiJkaXIiLCJlbmMiOiJBMR0NN....')
