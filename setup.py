@@ -2,7 +2,7 @@ from setuptools import find_packages
 from setuptools import setup
 
 setup(
-    name="ChatGPT-py",
+    name="PawanGPT",
     version="0.0.1",
     license="GNU General Public License v2.0",
     author="Pawan Osman",

@@ -13,7 +13,7 @@
 ## Get Started
 # Install dependencies first
 ```bash
-pip install "ChatGPT-py"
+pip install "PawanGPT"
 ```
 
 ## Example
