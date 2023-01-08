@@ -13,14 +13,14 @@
 ## Get Started
 # Install dependencies first
 ```bash
-pip install "python-socketio[asyncio_client]"
+pip install "ChatGPT-py"
 ```
 
 ## Example
 
 ```python
 import asyncio
-from pygpt import PyGPT
+from pygpt.pygpt import PyGPT
 
 async def main():
     chat_gpt = PyGPT('eyJhbGciOiJkaXIiLCJlbmMiOiJBMR0NN....')
