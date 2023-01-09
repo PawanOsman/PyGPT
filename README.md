@@ -2,7 +2,7 @@
 ## We have introduced a new method that utilizes a socket for faster performance without the need for a browser anymore. [[NodeJS Version](https://github.com/PawanOsman/chatgpt-io)][[C# Version](https://github.com/PawanOsman/ChatGPT.Net)]
 
 ## For support join [[Discord](https://discord.pawan.krd)]
-# ChatGPT.py - Unofficial API client for ChatGPT [[Discord](https://discord.pawan.krd)]
+# PyGPT - Unofficial API client for ChatGPT [[Discord](https://discord.pawan.krd)]
 
 [![PyPI Version](https://img.shields.io/pypi/v/PyGPT.svg)](https://pypi.org/project/PyGPT)
 [![GitHub issues](https://img.shields.io/github/issues/pawanosman/PyGPT)](https://github.com/PawanOsman/PyGPT/issues)
