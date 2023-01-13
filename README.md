@@ -21,7 +21,7 @@ pip install --upgrade PyGPT
 
 ```python
 import asyncio
-from PyGPT import PyGPT
+from pygpt import PyGPT
 
 async def main():
     chat_gpt = PyGPT('eyJhbGciOiJkaXIiLCJlbmMiOiJBMR0NN....')
@@ -40,7 +40,7 @@ if __name__ == '__main__':
 
 ```python 
 import asyncio
-from PyGPT import PyGPT
+from pygpt import PyGPT
 
 async def main():
     chat_gpt = PyGPT('eyJhbGciOiJkaXIiLCJlbmMiOiJBMR0NN....')
