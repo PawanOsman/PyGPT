@@ -1,5 +1,5 @@
 # Update 30-DEC-2022
-## We have introduced a new method that utilizes a socket for faster performance without the need for a browser anymore. [[NodeJS Version](https://github.com/PawanOsman/chatgpt-io)][[C# Version](https://github.com/PawanOsman/ChatGPT.Net)]
+## We have implemented support for pro accounts. [[NodeJS Version](https://github.com/PawanOsman/chatgpt-io)][[C# Version](https://github.com/PawanOsman/ChatGPT.Net)]
 
 ## For support join [[Discord](https://discord.pawan.krd)]
 # PyGPT - Unofficial API client for ChatGPT [[Discord](https://discord.pawan.krd)]
