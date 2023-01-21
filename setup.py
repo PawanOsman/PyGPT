@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name="PyGPT",
-    version="1.0.2",
+    version="1.0.5",
     license="MIT License",
     author="Pawan Osman",
     author_email="contact@pawan.krd",
