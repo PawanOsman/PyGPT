@@ -1,3 +1,6 @@
+# ***:warning: __This repository is deprecated and no longer maintained!__***
+if you have a question about it you can join our Discord server.
+
 ### For support join [[Discord](https://discord.pawan.krd)]
 
 # PyGPT - Unofficial API client for ChatGPT [[Discord](https://discord.pawan.krd)]
